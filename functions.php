@@ -11,11 +11,7 @@ if (!defined('ABSPATH')) {
 
 // تعريف الثوابت الخاصة بالقالب
 define('MUHTAWAA_THEME_URL', get_template_directory_uri());
-<<<<<<< HEAD
 define('MUHTAWAA_VERSION', '1.3.0');
-=======
-define('MUHTAWAA_VERSION', '1.2.0');
->>>>>>> 4cf17590f634ef8fb84ca18ad5665d4d57030f5a
 
 // تضمين ملفات الإعدادات الإضافية
 require_once get_template_directory() . '/inc/customizer.php';
@@ -367,7 +363,6 @@ function muhtawaa_display_reading_time() {
         echo '<span class="reading-time">⏱️ ' . $minutes . ' ' . __('دقيقة', 'muhtawaa') . '</span>';
     }
 }
-<<<<<<< HEAD
 // استخراج ملخص للمقال
 function muhtawaa_get_post_summary($post_id = null, $length = null) {
     if (!$post_id) {
@@ -391,10 +386,6 @@ function muhtawaa_display_post_summary() {
         echo '<p class="article-summary">' . esc_html($summary) . '</p>';
     }
 }
-
-
-=======
->>>>>>> 4cf17590f634ef8fb84ca18ad5665d4d57030f5a
 
 // 13. دالة المقالات المشابهة
 function muhtawaa_get_related_posts($post_id = null, $limit = 3) {
@@ -420,12 +411,8 @@ function muhtawaa_get_related_posts($post_id = null, $limit = 3) {
 }
 
 function muhtawaa_display_related_posts() {
-<<<<<<< HEAD
     $count = absint(get_theme_mod('muhtawaa_related_posts_count', 3));
     $related_posts = muhtawaa_get_related_posts(null, $count);
-=======
-    $related_posts = muhtawaa_get_related_posts();
->>>>>>> 4cf17590f634ef8fb84ca18ad5665d4d57030f5a
     
     if (empty($related_posts)) {
         return;
